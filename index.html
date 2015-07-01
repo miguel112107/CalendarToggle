@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+    <title>Starting Lineup</title>
+    <link rel="stylesheet" type="text/css" href="Scripts/Style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+
+	
+	</script>
+	
+	</head>
+<body>
+    <!-- main Body -->
+    <div id="mainBody">
+        <!-- main Body Left -->
+        <div id="mainBody_left">
+            <table id="roster">
+                <thead>
+                    <tr>
+                        <th>Times</th>
+						<th></th>
+                        <th>Available</th>
+						<th></th>
+						<th>Change Available</th>
+                        
+                        <th></th>
+                    </tr>
+                </thead>
+                <!-- Todo: Generate table body -->
+                <tbody data-bind="foreach: availablePosition">
+                    <tr>
+                        <td data-bind="text: timeSlot"></td>
+                        <td></td>
+					<!--	<td><p><input data-bind="value: playerOnField" /></p></td>-->
+					<td data-bind="text: $index" ></td>
+						
+						<td>Checkbox: <input type="checkbox" id="myCheck"> <button data-bind="click: $parent.myFunction()">Add</button></td>
+						
+						
+						<td id = "demo" > </td>
+						
+					</tr>
+						
+							
+                </tbody>
+               
+			 
+                
+            </table>
+        </div>
+        <!-- main Body Left End-->
+        <!-- Field Display-->
+		<div id="fieldPlayers">
+		<canvas id="canvas" width="400" height="300">
+		This text is displayed if your browser does not support HTML5 Canvas.
+		
+		</canvas>
+         <!-- Field Players End -->
+        </div>
+        <!--Field Display End-->
+        
+    </div>
+    <!-- main Body  end-->
+
+
+
+    <script type="text/javascript" src="Scripts/knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="Scripts/VM_Field.js"></script>
+</body>
+</html>
