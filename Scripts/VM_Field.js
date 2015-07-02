@@ -23,14 +23,6 @@ function ScheduleViewModel() {
 		{ timeSlot: "55-60", available },
     ]);
 	
-	
-	
-	
-	
-	
-	
-	
-	
 	//debugging purposes/////////////////////////////////////////////////////////////////
 self.availability = [
         { timeSlot: "0-5", available},
@@ -58,25 +50,25 @@ self.availability = [
 	self.myFunction = function() {
 	
     var x;
-		if(x = document.getElementById("myCheck").checked){
-		document.getElementById("availCheck").innerHTML = true;
-		available= true;
-		alert(available);
-		calendarToggle(available);
-		}
+			for(var i = 0; i<12; i++)
+			{
+			if(x = document.getElementById("myCheck").checked)
+			{
+			//document.getElementById("availCheck"+String(i)).innerHTML = true;
+			available= false;
+			//alert(available);//debugging
+			calendarToggle(available);
+			}
 
-		else{
-		document.getElementById("availCheck").innerHTML = false;
-		available = false;
-		alert(available);
-		calendarToggle(available);
+			else{
+			//document.getElementById("availCheck"+String(i)).innerHTML = false;
+			available = true;
+			//alert(available);//debugging
+			calendarToggle(available);
+			}
 		}
-		
 	}
-	
-	
-	
-	
+
 }
 function calendarToggle(avail) {
 	availability = avail;
@@ -146,13 +138,7 @@ function calendarToggle(avail) {
 		ctx.fill();
 		lastend += Math.PI*2*(myData[i].divide/myTotal);
 		
-		var c = document.getElementById("canvas");
-		var ctx = c.getContext("2d");
-		ctx.fillStyle = "black";
-		ctx.beginPath();
-		ctx.arc(200, 150, 120, 0, 2 * Math.PI);
-		ctx.fill();
-		ctx.stroke();
+		
 
 		
 		
