@@ -125,11 +125,10 @@ function calendarToggle(avail) {
 		ctx.fillStyle = "green";
 		
 		}
-		else{
-		ctx.fillStyle = "red";
-		
-
+		else if(availability == false){
+		ctx.fillStyle = "orange";
 		}
+		
 		ctx.beginPath();
 		ctx.moveTo(200,150);
 		ctx.arc(200,150,150,lastend,lastend+
