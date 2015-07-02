@@ -32,7 +32,7 @@ function ScheduleViewModel() {
 	
 	
 	//debugging purposes/////////////////////////////////////////////////////////////////
-self.availablePlayers = [
+self.availability = [
         { timeSlot: "0-5", available},
         { timeSlot: "5-10", available},
         { timeSlot: "10-15", available },
@@ -59,17 +59,17 @@ self.availablePlayers = [
 	
     var x;
 		if(x = document.getElementById("myCheck").checked){
-		document.getElementById("demo").innerHTML = true;
+		document.getElementById("availCheck").innerHTML = true;
 		available= true;
 		alert(available);
-		rosterSpot(available);
+		calendarToggle(available);
 		}
 
 		else{
-		document.getElementById("demo").innerHTML = false;
+		document.getElementById("availCheck").innerHTML = false;
 		available = false;
 		alert(available);
-		rosterSpot(available);
+		calendarToggle(available);
 		}
 		
 	}
@@ -78,8 +78,8 @@ self.availablePlayers = [
 	
 	
 }
-function rosterSpot(avail) {
-	availablePlayers = avail;
+function calendarToggle(avail) {
+	availability = avail;
 		
 
 		var myData = [
@@ -121,15 +121,15 @@ function rosterSpot(avail) {
 		
 		/*var ToF = prompt("Please Enter if Available")
 			if(ToF == "false"){
-				availablePlayers[i].available = false;
+				availability[i].available = false;
 				
 			}
 			
 			else{
-				availablePlayers[i].available = true;
+				availability[i].available = true;
 			}*/
 		
-		if(availablePlayers == true){
+		if(availability == true){
 		ctx.fillStyle = "green";
 		
 		}
