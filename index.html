@@ -14,11 +14,7 @@
                 <thead>
                     <tr>
                         <th>Times</th>
-						<th></th>
-                        <th>Available Check</th>
-						<th></th>
-						<th>Change Available</th>
-                        <th></th>
+						
                     </tr>
                 </thead>
                 <!-- Todo: Generate table body -->
@@ -26,27 +22,97 @@
                     <tr>
                         <td data-bind="text: timeSlot"></td>
                         <td></td>							
-						<td>Change: <input type="checkbox" id="myCheck"> <button data-bind="click: $parent.myFunction()">Submit</button></td>												
+																		
 						<td></td>
 					</tr>
                 </tbody>  
+			</table>
+				<table>
+					 <tr>
+                        <th>Change If Booked</th>
+						<th><th>
+						<th>Are You Available</th>
+						
+                    </tr>
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck0">
+					<td>
 					<td id = "availCheck0" > </td>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck1">
+					<td>
 					<td id = "availCheck1" > </td>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck2">
+					<td>
 					<td id = "availCheck2" > </td>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck3">
+					<td>
 					<td id = "availCheck3" > </td>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck4">
+					<td>
 					<td id = "availCheck4" > </td>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck5">
+					<td>
 					<td id = "availCheck5" > </td>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck6">
+					<td>
 					<td id = "availCheck6" > </td>
-					<td id = "availCheck7" > </td>				
-					<td id = "availCheck8" > </td>				
-					<td id = "availCheck9" > </td>				
-					<td id = "availCheck10" > </td>				
-					<td id = "availCheck11" > </td>				
-            </table>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck7">
+					<td>
+					<td id = "availCheck7" > </td>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck8">
+					<td>
+					<td id = "availCheck8" > </td>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck9">
+					<td>
+					<td id = "availCheck9" > </td>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck10">
+					<td>
+					<td id = "availCheck10" > </td>
+					</tr>
+					
+					<tr>
+					<td>Change: <input type="checkbox" id="myCheck11">
+					<td>
+					<td id = "availCheck11" > </td>
+					</tr>
+					
+				</table>
+            <button onclick ="myFunction()">Submit</button>
         </div>
         <!-- main Body Left End-->
         <!-- Circle and Canvas-->
 		<div id="circleSchedule">
+			<p>This is your minute by minute availability</p>
 			<canvas id="canvas" width="400" height="300">
 			This text is displayed if your browser does not support HTML5 Canvas.
 			

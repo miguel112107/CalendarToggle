@@ -9,67 +9,63 @@ function ScheduleViewModel() {
 	
     //array used to push values to UI
     self.availablePosition = ko.observableArray([
-		{ timeSlot: "0-5", available},
-        { timeSlot: "5-10", available},
-        { timeSlot: "10-15", available },
-        { timeSlot: "15-20", available },
-        { timeSlot: "20-25", available},
-		{ timeSlot: "25-30", available},
-		{ timeSlot: "30-35", available },
-        { timeSlot: "35-40", available },
-        { timeSlot: "40-45", available },
-        { timeSlot: "45-50", available },
-        { timeSlot: "50-55", available },
-		{ timeSlot: "55-60", available },
+		{ timeSlot: "0-5"},
+        { timeSlot: "5-10"},
+        { timeSlot: "10-15"},
+        { timeSlot: "15-20"},
+        { timeSlot: "20-25"},
+		{ timeSlot: "25-30"},
+		{ timeSlot: "30-35"},
+        { timeSlot: "35-40"},
+        { timeSlot: "40-45"},
+        { timeSlot: "45-50" },
+        { timeSlot: "50-55" },
+		{ timeSlot: "55-60"},
     ]);
-	
-	//debugging purposes/////////////////////////////////////////////////////////////////
-self.availability = [
-        { timeSlot: "0-5", available},
-        { timeSlot: "5-10", available},
-        { timeSlot: "10-15", available },
-        { timeSlot: "15-20", available},
-        { timeSlot: "20-25", available },
-		{ timeSlot: "25-30", available },
-		{ timeSlot: "30-35", available},
-        { timeSlot: "35-40", available },
-        { timeSlot: "40-45", available },
-        { timeSlot: "45-50", available },
-        { timeSlot: "50-55", available},
-		{ timeSlot: "55-60", available}
-    ];
-		
-    
-    
-       
-       
-        
-  
-/////////////////////////////end debug///////////////////////////////////////
-	
-	self.myFunction = function() {
-	
-    var x;
-			for(var i = 0; i<12; i++)
-			{
-			if(x = document.getElementById("myCheck").checked)
-			{
-			//document.getElementById("availCheck"+String(i)).innerHTML = true;
-			available= false;
-			//alert(available);//debugging
-			calendarToggle(available);
-			}
-
-			else{
-			//document.getElementById("availCheck"+String(i)).innerHTML = false;
-			available = true;
-			//alert(available);//debugging
-			calendarToggle(available);
-			}
-		}
-	}
 
 }
+
+	function myFunction() 
+	{
+		var arrAvail = [
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+		];
+		var x;
+				for(var i = 0; i < arrAvail.length; i++)
+				{
+					if(x = document.getElementById("myCheck"+String(i)).checked)
+					{
+						document.getElementById("availCheck"+String(i)).innerHTML = "No";
+						arrAvail[i]= false;
+						
+						//alert(i);//debugging
+					}
+
+					else
+					{
+						document.getElementById("availCheck"+String(i)).innerHTML ="Yes";
+					
+						//alert(i);//debugging
+						arrAvail[i]= true;
+
+					}
+					
+				}
+		calendarToggle(arrAvail)
+	}
+
+
 function calendarToggle(avail) {
 	availability = avail;
 		
@@ -121,12 +117,12 @@ function calendarToggle(avail) {
 				availability[i].available = true;
 			}*/
 		
-		if(availability == true){
+		if(availability[i] == true){
 		ctx.fillStyle = "green";
 		
 		}
-		else if(availability == false){
-		ctx.fillStyle = "orange";
+		else if(availability[i] == false){
+		ctx.fillStyle = "red";
 		}
 		
 		ctx.beginPath();
@@ -137,6 +133,13 @@ function calendarToggle(avail) {
 		ctx.fill();
 		lastend += Math.PI*2*(myData[i].divide/myTotal);
 		
+		var c=document.getElementById("canvas");
+		var ctx=c.getContext("2d");
+		ctx.beginPath();
+		ctx.fillStyle = "white";
+		ctx.arc(200,150,125,0,2*Math.PI);
+		ctx.stroke();
+		ctx.fill();
 		
 
 		
