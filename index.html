@@ -1,7 +1,7 @@
-﻿<html>
+<html>
 <head>
-    <title>Starting Lineup</title>
-    <link rel="stylesheet" type="text/css" href="Scripts/Style.css">
+    <title>Circle Schedule</title>
+    <link rel="stylesheet" type="text/css" href="Scripts/stylesheet.css">
 	</script>
 	
 	</head>
@@ -9,120 +9,15 @@
     <!-- main Body -->
     <div id="mainBody">
         <!-- main Body Left -->
-        <div id="mainBody_left">
-            <table id="roster">
-                <thead>
-                    <tr>
-                        <th>Times</th>
-						
-                    </tr>
-                </thead>
-                <!-- Todo: Generate table body -->
-                <tbody data-bind="foreach: availablePosition">
-                    <tr>
-                        <td data-bind="text: timeSlot"></td>
-                        <td></td>							
-																		
-						<td></td>
-					</tr>
-                </tbody>  
-			</table>
-				<table>
-					 <tr>
-                        <th>Change If Booked</th>
-						<th><th>
-						<th>Are You Available</th>
-						
-                    </tr>
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck0">
-					<td>
-					<td id = "availCheck0" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck1">
-					<td>
-					<td id = "availCheck1" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck2">
-					<td>
-					<td id = "availCheck2" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck3">
-					<td>
-					<td id = "availCheck3" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck4">
-					<td>
-					<td id = "availCheck4" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck5">
-					<td>
-					<td id = "availCheck5" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck6">
-					<td>
-					<td id = "availCheck6" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck7">
-					<td>
-					<td id = "availCheck7" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck8">
-					<td>
-					<td id = "availCheck8" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck9">
-					<td>
-					<td id = "availCheck9" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck10">
-					<td>
-					<td id = "availCheck10" > </td>
-					</tr>
-					
-					<tr>
-					<td>Change: <input type="checkbox" id="myCheck11">
-					<td>
-					<td id = "availCheck11" > </td>
-					</tr>
-					
-				</table>
-            <button onclick ="myFunction()">Submit</button>
-        </div>
-        <!-- main Body Left End-->
-        <!-- Circle and Canvas-->
-		<div id="circleSchedule">
-			<p>This is your minute by minute availability</p>
-			<canvas id="canvas" width="400" height="300" onclick="q()">
-			This text is displayed if your browser does not support HTML5 Canvas.
+		
+				<p>This is your minute by minute availability</p>
+				<canvas id="canvas" width="800" height="500" onclick="q()">
+				This text is displayed if your browser does not support HTML5 Canvas.
+				</canvas>
 			
-			</canvas>
-         <!-- Field Players End -->
-        </div>
-        <!--Field Display End-->
-        
-    </div>
-    <!-- main Body  end-->
+			</div>
+
+		<!-- main Body  end-->
 
     <script type="text/javascript" src="Scripts/knockout-3.2.0.js"></script>
     <script type="text/javascript" src="Scripts/jquery-2.1.3.js"></script>
